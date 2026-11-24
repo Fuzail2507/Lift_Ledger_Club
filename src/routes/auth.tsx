@@ -34,14 +34,22 @@ export const Route = createFileRoute("/auth")({
     if (mode === "signin" || mode === "signup" || mode === "forgot") out.mode = mode;
     return out;
   },
-  head: () => ({
-    meta: [
-      { title: "Sign in — IronLog" },
-      { name: "description", content: "Sign in or create your free IronLog account to start tracking your training." },
-      { property: "og:title", content: "Sign in — IronLog" },
-      { property: "og:description", content: "Sign in or create your free IronLog account." },
-    ],
-  }),
+ 
+head: () => ({
+  meta: [
+    { title: "Sign in — Lift Ledger Club" },
+    {
+      name: "description",
+      content: "Sign in or create your Lift Ledger Club account to start tracking your training.",
+    },
+    { property: "og:title", content: "Sign in — Lift Ledger Club" },
+    {
+      property: "og:description",
+      content: "Sign in or create your Lift Ledger Club account.",
+    },
+  ],
+}),
+
   component: AuthPage,
 });
 
@@ -138,7 +146,7 @@ function AuthPage() {
             Log your sessions in seconds, see what you lifted last time, and watch your estimated one-rep max climb.
           </p>
         </div>
-        <p className="relative text-xs text-muted-foreground">© {new Date().getFullYear()} IronLog</p>
+       <p className="relative text-xs text-muted-foreground">© {new Date().getFullYear()} Lift Ledger Club</p>
       </aside>
 
       <main className="flex flex-col px-5 py-6 sm:px-10">
@@ -241,7 +249,7 @@ function AuthPage() {
               <p className="mt-6 text-center text-sm text-muted-foreground">
                 {mode === "signin" ? (
                   <>
-                    New to IronLog?{" "}
+                    New to Lift Ledger Club?{" "}
                     <button type="button" onClick={() => setMode("signup")} className="font-medium text-primary hover:underline">
                       Create an account
                     </button>

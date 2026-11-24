@@ -16,9 +16,9 @@ import { formatVolume } from "@/lib/units";
 export const Route = createFileRoute("/_authenticated/history/")({
   head: () => ({
     meta: [
-      { title: "Workout history — IronLog" },
+      { title: "Workout history — Lift Ledger Club" },
       { name: "description", content: "Every workout you've logged." },
-      { property: "og:title", content: "Workout history — IronLog" },
+      { property: "og:title", content: "Workout history — Lift Ledger Club" },
       { property: "og:description", content: "Every workout you've logged." },
     ],
   }),

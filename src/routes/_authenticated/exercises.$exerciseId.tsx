@@ -32,9 +32,9 @@ import { cn } from "@/lib/utils";
 export const Route = createFileRoute("/_authenticated/exercises/$exerciseId")({
   head: () => ({
     meta: [
-      { title: "Exercise progress — IronLog" },
+      { title: "Exercise progress — Lift Ledger Club" },
       { name: "description", content: "Personal records and performance history for this exercise." },
-      { property: "og:title", content: "Exercise progress — IronLog" },
+      { property: "og:title", content: "Exercise progress — Lift Ledger Club" },
       { property: "og:description", content: "Personal records and performance history." },
     ],
   }),

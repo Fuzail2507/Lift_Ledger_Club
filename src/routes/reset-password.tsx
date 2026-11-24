@@ -9,17 +9,22 @@ import { Label } from "@/components/ui/label";
 import { Logo } from "@/components/app/logo";
 import { errorMessage } from "@/lib/format";
 
-export const Route = createFileRoute("/reset-password")({
-  head: () => ({
-    meta: [
-      { title: "Set a new password — IronLog" },
-      { name: "description", content: "Choose a new password for your IronLog account." },
-      { property: "og:title", content: "Set a new password — IronLog" },
-      { property: "og:description", content: "Choose a new password for your IronLog account." },
-    ],
-  }),
-  component: ResetPasswordPage,
-});
+
+head: () => ({
+  meta: [
+    { title: "Set a new password — Lift Ledger Club" },
+    {
+      name: "description",
+      content: "Choose a new password for your Lift Ledger Club account.",
+    },
+    { property: "og:title", content: "Set a new password — Lift Ledger Club" },
+    {
+      property: "og:description",
+      content: "Choose a new password for your Lift Ledger Club account.",
+    },
+  ],
+}),
+
 
 function ResetPasswordPage() {
   const navigate = useNavigate();

@@ -1,4 +1,4 @@
-# IronLog roadmap
+# Lift Ledger Club roadmap
 
 ## Phase 1 (core)
 - [ ] Database architecture (all tables + RLS, seed exercise library)

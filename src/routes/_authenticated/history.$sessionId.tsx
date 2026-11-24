@@ -11,17 +11,22 @@ import { formatDuration, formatWorkoutDate } from "@/lib/format";
 import { formatVolume, formatWeight } from "@/lib/units";
 import { RECORD_LABEL } from "@/lib/exercise-meta";
 
-export const Route = createFileRoute("/_authenticated/history/$sessionId")({
-  head: () => ({
-    meta: [
-      { title: "Workout details — IronLog" },
-      { name: "description", content: "Sets, reps and records from this workout." },
-      { property: "og:title", content: "Workout details — IronLog" },
-      { property: "og:description", content: "Sets, reps and records from this workout." },
-    ],
-  }),
-  component: SessionPage,
-});
+
+head: () => ({
+  meta: [
+    { title: "Workout details — Lift Ledger Club" },
+    {
+      name: "description",
+      content: "Sets, reps and records from this workout.",
+    },
+    { property: "og:title", content: "Workout details — Lift Ledger Club" },
+    {
+      property: "og:description",
+      content: "Sets, reps and records from this workout.",
+    },
+  ],
+}),
+
 
 function SessionPage() {
   const { sessionId } = Route.useParams();

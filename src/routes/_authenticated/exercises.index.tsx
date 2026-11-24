@@ -17,9 +17,9 @@ import { equipmentLabel } from "@/lib/exercise-meta";
 export const Route = createFileRoute("/_authenticated/exercises/")({
   head: () => ({
     meta: [
-      { title: "Exercise library — IronLog" },
+      { title: "Exercise library — Lift Ledger Club" },
       { name: "description", content: "Search exercises by muscle group and equipment, or create your own." },
-      { property: "og:title", content: "Exercise library — IronLog" },
+      { property: "og:title", content: "Exercise library — Lift Ledger Club" },
       { property: "og:description", content: "Search exercises by muscle group and equipment." },
     ],
   }),

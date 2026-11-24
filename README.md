@@ -528,17 +528,9 @@ Prioritize functionality, performance, scalability and an exceptional user exper
 
 The final product should look and feel like a serious commercial fitness SaaS platform, not a beginner project.
 
-This project was built with [Lovable](https://lovable.dev).
 
 **Live app**: https://lift-ledger-club.lovable.app
 
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/8bffe4c6-a18f-58da-a75c-efa2447006da).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
 
 ## Development
 

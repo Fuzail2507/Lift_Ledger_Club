@@ -20,9 +20,9 @@ import { formatWeight } from "@/lib/units";
 export const Route = createFileRoute("/_authenticated/workout/$sessionId")({
   head: () => ({
     meta: [
-      { title: "Workout — IronLog" },
+      { title: "Workout — Lift Ledger Club" },
       { name: "description", content: "Log your sets, reps and rest in real time." },
-      { property: "og:title", content: "Workout — IronLog" },
+      { property: "og:title", content: "Workout — Lift Ledger Club" },
       { property: "og:description", content: "Log your sets, reps and rest in real time." },
     ],
   }),

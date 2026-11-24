@@ -15,10 +15,10 @@ import { errorMessage } from "@/lib/format";
 export const Route = createFileRoute("/_authenticated/profile")({
   head: () => ({
     meta: [
-      { title: "Profile — IronLog" },
-      { name: "description", content: "Manage your IronLog profile and preferences." },
-      { property: "og:title", content: "Profile — IronLog" },
-      { property: "og:description", content: "Manage your IronLog profile." },
+      { title: "Profile — Lift Ledger Club" },
+      { name: "description", content: "Manage your Lift Ledger Club profile and preferences." },
+      { property: "og:title", content: "Profile — Lift Ledger Club" },
+      { property: "og:description", content: "Manage your Lift Ledger Club profile." },
     ],
   }),
   component: ProfilePage,

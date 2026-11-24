@@ -7,13 +7,13 @@ import { useSession } from "@/hooks/use-session";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "IronLog — The workout tracker for serious lifters" },
+      { title: "Lift Ledger Club — Workout Tracker" },
       {
         name: "description",
         content:
           "Log sets and reps in seconds, auto-detect personal records and see your strength progression with beautiful analytics. Free to start.",
       },
-      { property: "og:title", content: "IronLog — The workout tracker for serious lifters" },
+      { property: "og:title", content: "Lift Ledger Club — Workout Tracker" },
       {
         property: "og:description",
         content: "Log every set, auto-detect PRs and watch your estimated 1RM climb. Free to start.",
@@ -68,8 +68,7 @@ function Landing() {
               <span className="text-primary">Know exactly why.</span>
             </h1>
             <p className="mt-6 max-w-lg text-base text-muted-foreground sm:text-lg">
-              IronLog is the training log for people who take the gym seriously. Record every set in seconds, see what
-              you lifted last time, and let your personal records find you.
+              Lift Ledger Club is the training log for people who take the gym seriously. Record every set in seconds, see what you lifted last time, and let your personal records find you.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Button asChild variant="hero" size="xl">
@@ -147,7 +146,7 @@ function Landing() {
       <footer className="border-t border-border">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-5 py-8 text-sm text-muted-foreground sm:flex-row">
           <Logo />
-          <p>© {new Date().getFullYear()} IronLog. Train hard, log harder.</p>
+          <p>© {new Date().getFullYear()} Lift Ledger Club. Train hard, log harder.</p>
         </div>
       </footer>
     </div>

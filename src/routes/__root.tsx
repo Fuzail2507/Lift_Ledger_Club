@@ -11,7 +11,6 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
-import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Toaster } from "@/components/ui/sonner";
 import { supabase } from "@/integrations/supabase/client";
 
@@ -37,17 +36,17 @@ function NotFoundComponent() {
   );
 }
 
+
 function ErrorComponent({ error, reset }: ErrorComponentProps) {
   console.error(error);
   const router = useRouter();
-  useEffect(() => {
-    reportLovableError(error, { boundary: "tanstack_root_error_component" });
-  }, [error]);
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
-        <h1 className="font-display text-xl font-semibold text-foreground">This page didn't load</h1>
+        <h1 className="font-display text-xl font-semibold text-foreground">
+          This page didn't load
+        </h1>
         <p className="mt-2 text-sm text-muted-foreground">
           Something went wrong on our end. You can try refreshing or head back home.
         </p>
@@ -73,16 +72,17 @@ function ErrorComponent({ error, reset }: ErrorComponentProps) {
   );
 }
 
+
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   head: () => ({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1, viewport-fit=cover" },
       { name: "theme-color", content: "#0f0f12" },
-      { title: "IronLog — Workout tracker for serious lifters" },
+      { title: "Lift Ledger Club — Workout Tracker" },
       { name: "description", content: "Log every set, track personal records and watch your strength grow." },
-      { name: "author", content: "IronLog" },
-      { property: "og:title", content: "IronLog — Workout tracker for serious lifters" },
+      { name: "author", content: "Lift Ledger Club" },
+      { property: "og:title", content: "Lift Ledger Club — Workout Tracker" },
       { property: "og:description", content: "Log every set, track personal records and watch your strength grow." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -95,7 +95,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: "https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=JetBrains+Mono:wght@400;500;600&display=swap",
       },
       { rel: "stylesheet", href: appCss },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "icon", href: "/lift-ledger-logo.png", type: "image/png" },
     ],
   }),
   shellComponent: RootShell,

@@ -22,17 +22,22 @@ import { formatDuration, formatWorkoutDate, timeAgo } from "@/lib/format";
 import { CATEGORY_TONE, RECORD_LABEL, categoryLabel } from "@/lib/exercise-meta";
 import { cn } from "@/lib/utils";
 
-export const Route = createFileRoute("/_authenticated/dashboard")({
-  head: () => ({
-    meta: [
-      { title: "Dashboard — IronLog" },
-      { name: "description", content: "Your training overview: volume, streak, records and progression." },
-      { property: "og:title", content: "Dashboard — IronLog" },
-      { property: "og:description", content: "Your training overview on IronLog." },
-    ],
-  }),
-  component: Dashboard,
-});
+
+head: () => ({
+  meta: [
+    { title: "Dashboard — Lift Ledger Club" },
+    {
+      name: "description",
+      content: "Your training overview: volume, streak, records and progression.",
+    },
+    { property: "og:title", content: "Dashboard — Lift Ledger Club" },
+    {
+      property: "og:description",
+      content: "Your training overview on Lift Ledger Club.",
+    },
+  ],
+}),
+
 
 function Dashboard() {
   const user = useUser();
