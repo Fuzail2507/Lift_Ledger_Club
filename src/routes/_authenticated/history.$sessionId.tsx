@@ -12,20 +12,23 @@ import { formatVolume, formatWeight } from "@/lib/units";
 import { RECORD_LABEL } from "@/lib/exercise-meta";
 
 
-head: () => ({
-  meta: [
-    { title: "Workout details — Lift Ledger Club" },
-    {
-      name: "description",
-      content: "Sets, reps and records from this workout.",
-    },
-    { property: "og:title", content: "Workout details — Lift Ledger Club" },
-    {
-      property: "og:description",
-      content: "Sets, reps and records from this workout.",
-    },
-  ],
-}),
+export const Route = createFileRoute("/_authenticated/history/$sessionId")({
+  head: () => ({
+    meta: [
+      { title: "Workout details — Lift Ledger Club" },
+      {
+        name: "description",
+        content: "Sets, reps and records from this workout.",
+      },
+      { property: "og:title", content: "Workout details — Lift Ledger Club" },
+      {
+        property: "og:description",
+        content: "Sets, reps and records from this workout.",
+      },
+    ],
+  }),
+  component: SessionPage,
+});
 
 
 function SessionPage() {

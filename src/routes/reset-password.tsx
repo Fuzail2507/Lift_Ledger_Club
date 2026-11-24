@@ -10,20 +10,23 @@ import { Logo } from "@/components/app/logo";
 import { errorMessage } from "@/lib/format";
 
 
-head: () => ({
-  meta: [
-    { title: "Set a new password — Lift Ledger Club" },
-    {
-      name: "description",
-      content: "Choose a new password for your Lift Ledger Club account.",
-    },
-    { property: "og:title", content: "Set a new password — Lift Ledger Club" },
-    {
-      property: "og:description",
-      content: "Choose a new password for your Lift Ledger Club account.",
-    },
-  ],
-}),
+export const Route = createFileRoute("/reset-password")({
+  head: () => ({
+    meta: [
+      { title: "Set a new password — Lift Ledger Club" },
+      {
+        name: "description",
+        content: "Choose a new password for your Lift Ledger Club account.",
+      },
+      { property: "og:title", content: "Set a new password — Lift Ledger Club" },
+      {
+        property: "og:description",
+        content: "Choose a new password for your Lift Ledger Club account.",
+      },
+    ],
+  }),
+  component: ResetPasswordPage,
+});
 
 
 function ResetPasswordPage() {
